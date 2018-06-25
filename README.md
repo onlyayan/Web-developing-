@@ -1,1 +1,1 @@
-this is a project of CSS rain with thunderstrom 
+Here is some project sample  
