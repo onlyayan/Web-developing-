@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="/home/only_ayan/Documents/GITHUB/Sticky Navbar/navbar.css">
+</head>
+<body>
+
+<div class="header">
+  <h2>Scrollll!!!</h2>
+  <p>Here is sticky Navbar</p>
+</div>
+
+<div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">Code</a>
+  <a href="javascript:void(0)">Run</a>
+</div>
+
+<div class="content">
+  <h3>Sample Text</h3>
+  <p>
+Sample Text
+By Jack Lyon | Published: March 7, 2001
+
+Working in Microsoft Word, I often need some “junk” text to play around with, for various reasons:
+
+* I’m designing a document and don’t want to get bogged down in what the text actually says.
+
+* I’m creating a template with various paragraph styles and need to see what they will look like.
+
+* I’m creating a macro and need some text for testing purposes.
+
+* I’m trying to learn more about some feature of Microsoft Word and don’t want to practice on a real document.
+
+Microsoft Word 97, 98, 2000, and 2001 include an undocumented feature that generates all of the sample text I need. Maybe you’ll find it helpful too. To use it, type the following line into a Word document and press the ENTER key:
+
+=Rand(1,1)
+
+Word will insert the following text into your document:
+
+The quick brown fox jumps over the lazy dog.
+
+(As you probably know, this sentence includes every letter in the alphabet and is sometimes used for typing practice.)
+
+Need more than one sentence? You can specify how many sentences you need by changing the last number in the Rand statement. For example, if you needed five sentences, you could type this–
+
+=Rand(1,5)
+
+–which would produce this:
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+<div class="footer">
+  <p>Hey this is Footer</p>
+</div>
+</body>
+</html>
